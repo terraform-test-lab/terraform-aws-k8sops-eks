@@ -56,4 +56,6 @@ module "eks" {
   aws_auth_users = var.aws_auth_users
 
   aws_auth_accounts = var.aws_auth_accounts
+
+  depends_on = [aws_kms_key.eks]
 }
